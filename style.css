@@ -1,0 +1,35 @@
+/* *****custom variables***** */
+:root {
+  /* ***primary colors*** */
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+
+  /* ***secondary colors*** */
+  --red: hsl(0, 87%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  /* ***neutral colors*** */
+  --gray: hsl(0, 0%, 75%);
+  --grayish-violet: hsl(257, 7%, 63%);
+  --very-dark-blue: hsl(255, 11%, 22%);
+  --very-dark-violet: hsl(260, 8%, 14%);
+
+  /* ***fonts*** */
+  --poppins-font: "Poppins", sans-serif;
+}
+
+/* *****general styles***** */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+  font-family: var(--poppins-font);
+  font-size: 18px;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 1980px;
+  overflow-x: hidden;
+}
