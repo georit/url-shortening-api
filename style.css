@@ -25,7 +25,7 @@
 
 body {
   background-color: var(--white);
-  color: var(--very-dark-blue);
+  color: var(--grayish-violet);
   font-family: var(--poppins-font);
   font-size: 18px;
   min-height: 100vh;
