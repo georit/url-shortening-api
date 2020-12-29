@@ -94,6 +94,7 @@ nav.main-nav ul.nav-links {
 
 nav.main-nav ul.nav-links.active {
   display: flex;
+  z-index: 99;
 }
 
 nav.main-nav ul.nav-links li.nav-link {
