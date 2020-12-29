@@ -21,10 +21,12 @@
 /* *****general styles***** */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: var(--white);
+  background-color: hsla(257, 0%, 95%);
   color: var(--grayish-violet);
   font-family: var(--poppins-font);
   font-size: 18px;
@@ -32,4 +34,338 @@ body {
   min-width: 100vw;
   max-width: 1980px;
   overflow-x: hidden;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:link,
+a:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+
+a.btn {
+  background-color: var(--cyan);
+}
+
+a.btn.btn-get-started {
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  text-transform: capitalize;
+}
+
+button.btn-shorten,
+a.btn.btn-shorten {
+  width: 100%;
+}
+
+.heading {
+  color: var(--very-dark-violet);
+}
+
+/* *****main navigation***** */
+nav.main-nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 8%;
+  position: relative;
+  background-color: var(--white);
+}
+
+nav.main-nav ul.nav-links {
+  background-color: var(--dark-violet);
+  border-radius: 12px;
+  display: none;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 84%;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+nav.main-nav ul.nav-links.active {
+  display: flex;
+}
+
+nav.main-nav ul.nav-links li.nav-link {
+  padding: 1.2rem 0;
+}
+
+nav.main-nav ul.nav-links li.nav-link:nth-child(3) {
+  border-bottom: 1px solid hsl(0, 0%, 30%);
+}
+
+nav.main-nav ul.nav-links li.nav-link:last-child {
+  padding-top: 0;
+}
+
+nav.main-nav ul.nav-links li.nav-link a.nav-link-anchor {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+a.btn.btn-sign-up {
+  padding: 0.8rem;
+  display: block;
+  border-radius: 25px;
+}
+
+nav.main-nav i.icon-mobile-nav-toggle {
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+div.hero,
+div.hero div.hero-img-container {
+  width: 100%;
+}
+
+div.hero {
+  background-color: var(--white);
+  padding: 0 8% 10rem;
+  position: relative;
+}
+
+div.hero div.hero-text h1.main-heading {
+  padding: 1.5rem 0 1rem;
+}
+
+div.hero div.hero-text p.hero-info {
+  padding-bottom: 2.5rem;
+}
+
+div.hero form.shorten-form {
+  background: url("./images/bg-shorten-mobile.svg") center center / 100% 100%,
+    no-repeat var(--dark-violet);
+  border-radius: 8px;
+  margin-top: 4rem;
+  padding: 1.5rem;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84%;
+}
+
+div.hero form.shorten-form input[type="text"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border: 2px solid transparent;
+}
+
+div.hero form.shorten-form.empty input[type="text"] {
+  border: 2px solid var(--red);
+}
+
+div.hero form.shorten-form.empty input[type="text"]::placeholder {
+  color: var(--red);
+  opacity: 1;
+}
+
+div.hero form.shorten-form.empty input[type="text"]:-ms-input-placeholder {
+  color: var(--red);
+}
+
+div.hero form.shorten-form.empty input[type="text"]::-ms-input-placeholder {
+  color: var(--red);
+}
+
+div.hero form.shorten-form p.error-msg {
+  color: var(--red);
+  text-align: left;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  display: none;
+}
+
+div.hero form.shorten-form.empty p.error-msg {
+  display: block;
+}
+
+div.hero form.shorten-form button.btn-shorten {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: var(--cyan);
+  border: none;
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+div.shortened-links {
+  width: 100%;
+  padding: 6rem 8%;
+}
+
+div.shortened-links div.shortened-link-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+div.shortened-links div.shortened-link-container p.link-to-shorten,
+div.shortened-links div.shortened-link-container p.shortened-link {
+  font-size: 1rem;
+}
+
+div.shortened-links div.shortened-link-container p.link-to-shorten {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--gray);
+  color: var(--very-dark-violet);
+}
+
+div.shortened-links div.shortened-link-container p.shortened-link {
+  padding: 0.6rem 0;
+  color: var(--cyan);
+}
+
+div.shortened-links div.shortened-link-container a.btn.btn-shorten {
+  display: block;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+section.section-features {
+  width: 100%;
+  padding: 0 8%;
+}
+
+section.section-features h2.section-heading,
+section.section-features h3.feature-title {
+  text-transform: capitalize;
+}
+
+section.section-features h2.section-heading {
+  padding-bottom: 1.5rem;
+}
+
+section.section-features p.section-features-info {
+  padding-bottom: 5rem;
+}
+
+section.section-features div.features {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+section.section-features div.features div.feature {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px hsla(0, 0%, 0%, 0.05);
+  padding: 5rem 1rem 2rem;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+section.section-features div.features div.feature::after {
+  content: "";
+  background-color: var(--cyan);
+  height: 6rem;
+  width: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
+section.section-features div.features div.feature:last-child:after {
+  display: none;
+}
+
+section.section-features div.features div.feature div.feature-icon-container {
+  background-color: var(--dark-violet);
+  border-radius: 50%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -15%;
+}
+
+section.section-features div.features div.feature h3.feature-title {
+  padding-bottom: 1rem;
+}
+
+section.section-features div.features div.feature p.feature-info {
+  font-size: 1rem;
+}
+
+div.boost {
+  background: url("./images/bg-boost-mobile.svg") center center / 100% 100%,
+    no-repeat var(--dark-violet);
+  padding: 5rem 8%;
+}
+
+div.boost h2.boost-heading {
+  color: var(--white);
+  padding-bottom: 2rem;
+}
+
+footer {
+  background-color: var(--very-dark-violet);
+  padding: 4rem 8% 2rem;
+}
+
+footer div.footer-nav {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+footer div.footer-nav h4.footer-nav-title {
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+
+footer div.footer-nav h4.footer-nav-title,
+footer div.footer-nav a.footer-nav-anchor {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+footer div.footer-nav a.footer-nav-anchor {
+  color: var(--gray);
+  padding-bottom: 0.3rem;
+}
+
+footer div.social-media {
+  padding: 1rem 0;
+  width: 100%;
+}
+
+footer div.social-media a.social-media-link {
+  margin-right: 1rem;
 }
