@@ -232,6 +232,10 @@ div.shortened-links div.shortened-link-container p.link-to-shorten {
   padding-bottom: 0.6rem;
   border-bottom: 1px solid var(--gray);
   color: var(--very-dark-violet);
+  max-width: 270px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 div.shortened-links div.shortened-link-container p.shortened-link {
@@ -452,7 +456,7 @@ footer div.social-media a.social-media-link {
     border-bottom: none;
     padding-bottom: 0;
     margin-right: 1rem;
-    max-width: 270px;
+    max-width: calc(100% - 500px);
   }
 
   div.shortened-links div.shortened-link-container p.shortened-link {

@@ -37,7 +37,7 @@
 
       <ul class="nav-links" id="nav-links">
         <li class="nav-link">
-          <a href="#" class="nav-link-anchor">features</a>
+          <a href="#section-features" class="nav-link-anchor">features</a>
         </li>
         <li class="nav-link">
           <a href="#" class="nav-link-anchor">pricing</a>
@@ -72,7 +72,9 @@
           Build your brand's recognition and get detailed insights on how links
           are performing.
         </p>
-        <a href="#" class="btn btn-get-started" role="button">get started</a>
+        <a href="#shorten-form" class="btn btn-get-started" role="button"
+          >get started</a
+        >
       </div>
       <form class="shorten-form" id="shorten-form">
         <label for="shorten">
@@ -83,7 +85,7 @@
             placeholder="Shorten a link here..."
           />
         </label>
-        <p class="error-msg" id="error-msg">Please add a link</p>
+        <p class="error-msg" id="error-msg"></p>
         <button
           class="btn btn-shorten btn-shorten-it"
           id="btn-shorten-it"
@@ -95,25 +97,9 @@
       </form>
     </div>
 
-    <div class="shortened-links">
-      <div class="shortened-link-container">
-        <p class="link-to-shorten">https://www.mambostudioz.com</p>
-        <p class="shortened-link">https://re.link.hjfhdasx</p>
-        <a href="" class="btn btn-shorten btn-copy">copy</a>
-      </div>
-      <div class="shortened-link-container">
-        <p class="link-to-shorten">https://www.mambostudioz.com</p>
-        <p class="shortened-link">https://re.link.hjfhdasx</p>
-        <a href="" class="btn btn-shorten btn-copy">copy</a>
-      </div>
-      <div class="shortened-link-container">
-        <p class="link-to-shorten">https://www.mambostudioz.com</p>
-        <p class="shortened-link">https://re.link.hjfhdasx</p>
-        <a href="" class="btn btn-shorten btn-copy">copy</a>
-      </div>
-    </div>
+    <div class="shortened-links"></div>
 
-    <section class="section-features">
+    <section class="section-features" id="section-features">
       <h2 class="section-heading heading">advanced statistics</h2>
       <p class="info section-features-info">
         Track how your links are performing across the web with our advanced
@@ -185,7 +171,13 @@
 
     <div class="boost">
       <h2 class="boost-heading heading">Boost your links today</h2>
-      <a href="#" class="btn btn-boost btn-get-started">get started</a>
+      <a
+        href="#shorten-form"
+        class="btn btn-boost btn-get-started"
+        role="button"
+      >
+        get started
+      </a>
     </div>
 
     <footer>
@@ -202,7 +194,7 @@
       </svg>
       <div class="footer-nav footer-nav-features">
         <h4 class="footer-nav-title">features</h4>
-        <a href="#" class="footer-nav-anchor">link shortening</a>
+        <a href="#shorten-form" class="footer-nav-anchor">link shortening</a>
         <a href="#" class="footer-nav-anchor">branded links</a>
         <a href="#" class="footer-nav-anchor">analytics</a>
       </div>
